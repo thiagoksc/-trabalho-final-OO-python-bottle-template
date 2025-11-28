@@ -1,6 +1,21 @@
 from bottle import route, view, template, request, redirect
 from services.filme_service import FilmeService
+from services.avaliacao_service import AvaliacaoService
+from services.user_service import UserService
 
+
+def limpar_texto(texto):
+    if not texto:
+        return ""
+    try:
+        return texto.encode('latin-1').decode('utf-8')
+    except:
+        
+        return texto
+
+
+avaliacao_service = AvaliacaoService()
+user_service = UserService()
 filme_service = FilmeService()
 
 @route('/')
@@ -23,11 +38,11 @@ def form_adicionar():
 # Rota para PROCESSAR o formulário
 @route('/adicionar', method='POST')
 def acao_adicionar():
-    titulo = request.forms.get('titulo')
-    genero = request.forms.get('genero')
+    titulo = limpar_texto(request.forms.get('titulo'))
+    genero = limpar_texto(request.forms.get('genero'))
     ano = request.forms.get('ano')
     imagem = request.forms.get('imagem')
-    sinopse = request.forms.get('sinopse')
+    sinopse = limpar_texto(request.forms.get('sinopse'))
     
     filme_service.adicionar(titulo, genero, ano, imagem, sinopse)
     
@@ -49,12 +64,58 @@ def form_editar(id):
 
 @route('/editar/<id:int>', method='POST')
 def acao_editar(id):
-    titulo = request.forms.get('titulo')
-    genero = request.forms.get('genero')
+    titulo = limpar_texto(request.forms.get('titulo'))
+    genero = limpar_texto(request.forms.get('genero'))
     ano = request.forms.get('ano')
     imagem = request.forms.get('imagem')
-    sinopse = request.forms.get('sinopse')
+    sinopse = limpar_texto(request.forms.get('sinopse'))
     
     filme_service.atualizar(id, titulo, genero, ano, imagem, sinopse)
     
     redirect('/')
+
+@route('/ver/<id:int>', method='GET')
+@view('ver_filme')
+def ver_filme(id):
+    
+    filme = filme_service.buscar_por_id(id)
+
+    
+    avaliacoes = avaliacao_service.buscar_por_filme(id)
+
+    return dict(filme=filme, avaliacoes=avaliacoes)
+
+
+@route('/avaliar/<filme_id:int>', method='POST')
+def salvar_avaliacao(filme_id):
+    # Pega o usuário logado
+    usuario_id = request.get_cookie("usuario_logado", secret='chave_secreta_grupo')
+    if not usuario_id:
+        redirect('/login')
+
+   
+    usuario = user_service.get_by_id(int(usuario_id))
+
+    nota = request.forms.get('nota')
+    comentario = request.forms.get('comentario')
+    try:
+        if comentario:
+            comentario = comentario.encode('latin-1').decode('utf-8')
+    except:
+        pass
+
+    avaliacao_service.adicionar(filme_id, int(usuario_id), usuario.name, nota, comentario)
+
+    
+    redirect(f'/ver/{filme_id}')
+
+
+@route('/deletar_avaliacao/<id_avaliacao:int>/<id_filme:int>')
+def deletar_avaliacao_action(id_avaliacao, id_filme):
+    usuario_id = request.get_cookie("usuario_logado", secret='chave_secreta_grupo')
+    if not usuario_id:
+        redirect('/login')
+
+    avaliacao_service.remover(id_avaliacao)
+    
+    redirect(f'/ver/{id_filme}')

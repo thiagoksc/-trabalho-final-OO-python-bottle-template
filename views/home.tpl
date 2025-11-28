@@ -57,7 +57,13 @@
                 <img src="{{filme.imagem}}" alt="Capa de {{filme.titulo}}">
                 
                 <div class="filme-info">
-                    <h2>{{filme.titulo}} <small>({{filme.ano}})</small></h2>
+                    <h2>
+                        <a href="/ver/{{filme.id}}" style="text-decoration: none; color: #333;">
+                            {{filme.titulo}}
+                        </a>
+                        <small>({{filme.ano}})</small>
+                    </h2>
+                    <a href="/ver/{{filme.id}}">Ver detalhes e comentários...</a>
                     
                     <p><strong>Gênero:</strong> {{filme.genero}}</p>
                     <p>{{filme.sinopse}}</p>
