@@ -174,5 +174,13 @@
         "usuario_nome": "Joana",
         "nota": 5.0,
         "comentario": "10/10"
+    },
+    {
+        "id": 27,
+        "filme_id": 18,
+        "usuario_id": 8,
+        "usuario_nome": "Julio",
+        "nota": 1.0,
+        "comentario": "muito ruim\r\n"
     }
 ]
