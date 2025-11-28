@@ -158,5 +158,21 @@
         "usuario_nome": "Joana",
         "nota": 2.9,
         "comentario": "L"
+    },
+    {
+        "id": 25,
+        "filme_id": 12,
+        "usuario_id": 7,
+        "usuario_nome": "Joana",
+        "nota": 4.9,
+        "comentario": "mt bmo"
+    },
+    {
+        "id": 26,
+        "filme_id": 22,
+        "usuario_id": 7,
+        "usuario_nome": "Joana",
+        "nota": 5.0,
+        "comentario": "10/10"
     }
 ]

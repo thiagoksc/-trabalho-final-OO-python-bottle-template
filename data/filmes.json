@@ -148,5 +148,15 @@
         "sinopse": "Depois que sua pequena cidade australiana é aniquilada por um ataque alienígena avassalador, um grupo de civis foge da captura e descobre que agora estão entre os últimos sobreviventes de uma invasão extraterrestre que engolfou todo o planeta. Enquanto a humanidade cai sob ocupação mundial, eles formam um exército local para lutar contra forças inimigas muito superiores. Na linha de frente da batalha pela Terra, eles são nossa última esperança.",
         "usuario_id": 5,
         "usuario_nome": "Joao"
+    },
+    {
+        "id": 22,
+        "titulo": "O Abutre",
+        "genero": "Crime",
+        "ano": "2014",
+        "imagem": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT5U7ztozeE0gqE7gqM22yzvhU7X_CgqpIsEHI00ysEuBTwfBDk",
+        "sinopse": "Para enfrentar dificuldades de conseguir um emprego formal, o jovem Louis Bloom (Jake Gyllenhaal) decide entrar no agitado submundo do jornalismo criminal independente de Los Angeles. A fórmula é correr atrás de crimes e acidentes chocantes, registrar tudo e vender a história para veículos interessados.",
+        "usuario_id": 7,
+        "usuario_nome": "Joana"
     }
 ]
