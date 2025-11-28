@@ -174,3 +174,19 @@ def deletar_avaliacao_action(id_avaliacao, id_filme):
         avaliacao_service.remover(id_avaliacao)
     
     redirect(f'/ver/{id_filme}')
+
+@route('/perfil/<id:int>')
+@view('perfil')
+def ver_perfil(id):
+    usuario_logado = get_usuario_logado()
+
+    dono_perfil = user_service.get_by_id(id)
+
+    filmes_do_usuario = filme_service.buscar_por_usuario(id)
+
+    filmes_do_usuario = filme_service.buscar_por_usuario(id)
+
+    if not dono_perfil:
+        redirect('/')
+
+    return dict(user=usuario_logado, perfil=dono_perfil, filmes=filmes_do_usuario)

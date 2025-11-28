@@ -14,5 +14,37 @@
         "birthdate": "2006-04-05",
         "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
         "tipo": "comum"
+    },
+    {
+        "id": 3,
+        "name": "Jorge ",
+        "email": "jorge@email.com",
+        "birthdate": "2000-05-07",
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "tipo": "comum"
+    },
+    {
+        "id": 4,
+        "name": "Rubens",
+        "email": "rubens@email.com",
+        "birthdate": "2010-09-05",
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "tipo": "comum"
+    },
+    {
+        "id": 5,
+        "name": "Joao",
+        "email": "joao@email.com",
+        "birthdate": "2002-05-04",
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "tipo": "comum"
+    },
+    {
+        "id": 6,
+        "name": "Bruno",
+        "email": "bruno@email.com",
+        "birthdate": "2006-05-04",
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "tipo": "comum"
     }
 ]
