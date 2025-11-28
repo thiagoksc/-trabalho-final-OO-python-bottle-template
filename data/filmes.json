@@ -1,24 +1,24 @@
 [
     {
         "id": 1,
-        "titulo": "O Poderoso ChefÃ£o",
+        "titulo": "O Poderoso Chefão",
         "genero": "Drama",
         "ano": "1972",
         "imagem": "https://br.web.img3.acsta.net/medias/nmedia/18/90/93/20/20120876.jpg",
-        "sinopse": "Uma famÃ­lia mafiosa luta para estabelecer sua supremacia nos Estados Unidos depois da Segunda Guerra Mundial. Uma tentativa de assassinato deixa o chefÃ£o Vito Corleone incapacitado e forÃ§a os filhos Michael e Sonny a assumir os negÃ³cios."
+        "sinopse": "Uma família mafiosa luta para estabelecer sua supremacia nos Estados Unidos depois da Segunda Guerra Mundial. Uma tentativa de assassinato deixa o chefão Vito Corleone incapacitado e força os filhos Michael e Sonny a assumir os negócios."
     },
     {
         "id": 2,
         "titulo": "Matrix",
         "genero": "Ficção Científica",
-        "ano": 1999,
+        "ano": "1999",
         "imagem": "https://upload.wikimedia.org/wikipedia/pt/c/c1/The_Matrix_Poster.jpg",
         "sinopse": "Um programador de computador descobre que este mundo é uma simulação virtual criada por máquinas e se une a um grupo de rebeldes para libertar a humanidade."
     },
     {
         "id": 3,
         "titulo": "Shrek",
-        "genero": "ComÃ©dia/Fantasia",
+        "genero": "Comédia/Fantasia",
         "ano": "2001",
         "imagem": "https://upload.wikimedia.org/wikipedia/pt/e/e6/Shrek_Poster.jpg",
         "sinopse": "Um ogro tem sua vida invadida por personagens de contos de fadas que acabam com a tranquilidade de seu lar. Ele faz um acordo pra resgatar uma princesa."
