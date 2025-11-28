@@ -55,11 +55,25 @@ class UserService:
         return hashlib.sha256(senha.encode()).hexdigest()
     
     def save(self):
-        password = request.forms.get('password')
+        last_id = max([u.id for u in self.user_model.get_all()], default=0)
+        new_id = last_id + 1
         
-        senha_criptografada = self._hash_senha(password)
+        name = request.forms.get('name')
+        email = request.forms.get('email')
+        birthdate = request.forms.get('birthdate')
+        password = request.forms.get('password')
 
-        user = User(..., password=senha_criptografada)
+        senha_final = self._hash_senha(password) 
+
+        user = User(
+            id=new_id, 
+            name=name, 
+            email=email, 
+            birthdate=birthdate, 
+            password=senha_final,
+            tipo='comum' # Define como comum por padrão
+        )
+        
         self.user_model.add_user(user)
     
     def validar_login(self, email, password):
