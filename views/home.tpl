@@ -73,6 +73,16 @@
         <div style="text-align: center; margin-bottom: 20px;">
             <a href="/adicionar" class="btn-add">+ Adicionar Filme</a>
         </div>
+
+        <form action="/" method="GET" style="text-align: center; margin-bottom: 20px;">
+            <input type="text" name="busca" placeholder="Pesquisar filme por título..."
+                    style="padding: 8px; width: 300px; border: 1px solid #ccc; border-radius: 4px;">
+            <button type="submit"
+                    style="padding: 8px 15px; background-color: #333; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                Buscar
+            </button>
+            <a href="/" style="margin-left: 10px; color: #666; text-decoration: none; font-size: 0.9em;">Limpar</a>
+        </form>
         
         <hr>
 

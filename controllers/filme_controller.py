@@ -26,13 +26,23 @@ def get_usuario_logado():
 
 @route('/')
 @view('home')
+@route('/')
+@view('home')
 def home():
+    # 1. Verifica login
     usuario = get_usuario_logado()
     if not usuario:
         redirect('/login')
 
-    filmes = filme_service.listar_todos()
+    busca = request.query.get('busca')
     
+    todos_filmes = filme_service.listar_todos()
+    
+    if busca:
+        filmes = [f for f in todos_filmes if busca.lower() in f.titulo.lower()]
+    else:
+        filmes = todos_filmes
+        
     return dict(filmes=filmes, user=usuario)
 
 # Rota para MOSTRAR o formulário
