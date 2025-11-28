@@ -38,3 +38,23 @@ def acao_adicionar():
 def acao_deletar(id):
     filme_service.remover(id)
     redirect('/')
+
+
+@route('/editar/<id:int>', method='GET')
+@view('editar_filme')
+def form_editar(id):
+    # Busca o filme para preencher os campos
+    filme = filme_service.buscar_por_id(id)
+    return dict(filme=filme)
+
+@route('/editar/<id:int>', method='POST')
+def acao_editar(id):
+    titulo = request.forms.get('titulo')
+    genero = request.forms.get('genero')
+    ano = request.forms.get('ano')
+    imagem = request.forms.get('imagem')
+    sinopse = request.forms.get('sinopse')
+    
+    filme_service.atualizar(id, titulo, genero, ano, imagem, sinopse)
+    
+    redirect('/')
