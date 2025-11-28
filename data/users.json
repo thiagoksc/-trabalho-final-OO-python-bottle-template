@@ -1,54 +1,18 @@
 [
-   
-    {
-        "id": 3,
-        "name": "Jjr",
-        "email": "Jjr@email.com",
-        "birthdate": "2024-08-05",
-        "password": "123",
-        "tipo": "comum"
-    },
-    {
-        "id": 4,
-        "name": "Joao",
-        "email": "joao@email.com",
-        "birthdate": "2025-11-14",
-        "password": "joao123",
-        "tipo": "comum"
-    },
-    {
-        "id": 5,
-        "name": "Carlos ",
-        "email": "carlos@gmail.com",
-        "birthdate": "2006-09-05",
-        "password": "12345",
-        "tipo": "comum"
-    },
-    {
-        "id": 6,
-        "name": "Thiago",
-        "email": "thiago@email.com",
-        "birthdate": "2003-03-03",
-        "password": "123456",
-        "tipo": "comum"
-    },
-    {
-        "id": 7,
-        "name": "Joao",
-        "email": "joao@email.com",
-        "birthdate": "0900-03-05",
-        "password": "123456",
-        "tipo": "comum"
-    },
     {
         "id": 1,
         "name": "admin",
         "email": "admin@admin",
         "birthdate": "2010-02-08",
-        "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918", 
+        "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918",
         "tipo": "admin"
     },
     {
-        "_comment":"senha admin: admin"
+        "id": 2,
+        "name": "Carlos",
+        "email": "carlos@email.com",
+        "birthdate": "2006-04-05",
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "tipo": "comum"
     }
 ]
