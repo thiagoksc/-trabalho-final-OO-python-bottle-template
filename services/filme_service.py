@@ -55,3 +55,26 @@ class FilmeService:
         lista_dicts = [f.to_dict() for f in filmes_mantidos]
         with open(self.caminho_arquivo, 'w', encoding='utf-8') as f:
             json.dump(lista_dicts, f, indent=4, ensure_ascii=False)
+
+    def buscar_por_id(self, id_filme):
+        filmes = self.listar_todos()
+        for filme in filmes:
+            if filme.id == id_filme:
+                return filme
+        return None
+    
+    def atualizar(self, id_filme, titulo, genero, ano, imagem, sinopse):
+        filmes = self.listar_todos()
+        
+        for filme in filmes:
+            if filme.id == id_filme:
+                filme.titulo = titulo
+                filme.genero = genero
+                filme.ano = ano
+                filme.imagem = imagem
+                filme.sinopse = sinopse
+                break
+        
+        lista_dicts = [f.to_dict() for f in filmes]
+        with open(self.caminho_arquivo, 'w', encoding='utf-8') as f:
+            json.dump(lista_dicts, f, indent=4, ensure_ascii=False)

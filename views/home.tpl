@@ -61,6 +61,9 @@
                     
                     <p><strong>Gênero:</strong> {{filme.genero}}</p>
                     <p>{{filme.sinopse}}</p>
+                    <a href="/editar/{{filme.id}}" style="color: #d39e00; font-weight: bold; text-decoration: none; margin-right: 15px;">
+                        [Editar]
+                    </a>
                     
                     <a href="/deletar/{{filme.id}}" class="btn-delete" onclick="return confirm('Tem certeza que deseja excluir este filme?')">
                         [Excluir Filme]

@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "titulo": "O Poderoso Chefão",
+        "titulo": "O Poderoso ChefÃ£o",
         "genero": "Drama",
-        "ano": 1972,
-        "imagem": "https://upload.wikimedia.org/wikipedia/pt/c/c4/Godfather_poster.jpg",
-        "sinopse": "Uma família mafiosa luta para estabelecer sua supremacia nos Estados Unidos depois da Segunda Guerra Mundial. Uma tentativa de assassinato deixa o chefão Vito Corleone incapacitado e força os filhos Michael e Sonny a assumir os negócios."
+        "ano": "1972",
+        "imagem": "https://br.web.img3.acsta.net/medias/nmedia/18/90/93/20/20120876.jpg",
+        "sinopse": "Uma famÃ­lia mafiosa luta para estabelecer sua supremacia nos Estados Unidos depois da Segunda Guerra Mundial. Uma tentativa de assassinato deixa o chefÃ£o Vito Corleone incapacitado e forÃ§a os filhos Michael e Sonny a assumir os negÃ³cios."
     },
     {
         "id": 2,
