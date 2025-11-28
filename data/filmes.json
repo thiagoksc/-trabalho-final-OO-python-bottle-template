@@ -138,5 +138,15 @@
         "sinopse": "No século 19, em Londres, dois amigos ilusionistas e mágicos, Alfred Borden e Rupert Angier, acabam construindo uma rivalidade, uma batalha por supremacia, que se estende ao longo dos anos e que se transforma em obsessão, cujos resultados serão inevitavelmente trágicos.",
         "usuario_id": 5,
         "usuario_nome": "Joao"
+    },
+    {
+        "id": 21,
+        "titulo": "A Invasão",
+        "genero": "Ficção científica",
+        "ano": "2018",
+        "imagem": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSWmS_pEYXdJRIo8n87-haRrMIqvh4-4Evj2Z2luPIqPXxijNzU",
+        "sinopse": "Depois que sua pequena cidade australiana é aniquilada por um ataque alienígena avassalador, um grupo de civis foge da captura e descobre que agora estão entre os últimos sobreviventes de uma invasão extraterrestre que engolfou todo o planeta. Enquanto a humanidade cai sob ocupação mundial, eles formam um exército local para lutar contra forças inimigas muito superiores. Na linha de frente da batalha pela Terra, eles são nossa última esperança.",
+        "usuario_id": 5,
+        "usuario_nome": "Joao"
     }
 ]

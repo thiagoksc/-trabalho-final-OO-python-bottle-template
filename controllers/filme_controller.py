@@ -29,7 +29,6 @@ def get_usuario_logado():
 @route('/')
 @view('home')
 def home():
-    # 1. Verifica login
     usuario = get_usuario_logado()
     if not usuario:
         redirect('/login')
@@ -37,14 +36,19 @@ def home():
     busca = request.query.get('busca')
     
     todos_filmes = filme_service.listar_todos()
+    medias_por_filme = avaliacao_service.calcular_media_por_filme()
     
-    if busca:
-        filmes = [f for f in todos_filmes if busca.lower() in f.titulo.lower()]
-    else:
-        filmes = todos_filmes
-        
-    return dict(filmes=filmes, user=usuario)
+    filmes_com_score = []
+    for filme in todos_filmes:
+        score = medias_por_filme.get(filme.id, 0.0)
+        filme.score = score
+        if not busca or busca.lower() in filme.titulo.lower():
+            filmes_com_score.append(filme)
 
+    filmes_ordenados = sorted(filmes_com_score, key=lambda f: f.score, reverse=True)
+    return dict(filmes=filmes_ordenados, user=usuario)
+
+    
 # Rota para MOSTRAR o formulário
 @route('/adicionar', method='GET')
 @view('adicionar_filme')
@@ -145,8 +149,8 @@ def salvar_avaliacao(filme_id):
     usuario = user_service.get_by_id(int(usuario_id))
     
     try:
-        nota = int(request.forms.get('nota'))
-        if nota < 1 or nota > 5:
+        nota = float(request.forms.get('nota'))
+        if nota < 0.0 or nota > 5.0:
             raise ValueError("Nota inválida")
     except:
         redirect(f'/ver/{filme_id}')
