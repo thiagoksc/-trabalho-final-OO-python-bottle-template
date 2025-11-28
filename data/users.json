@@ -1,12 +1,5 @@
 [
-    {
-        "id": 2,
-        "name": "Admin ",
-        "email": "admin@admin",
-        "birthdate": "2006-04-08",
-        "password": "admin",
-        "tipo": "admin"
-    },
+   
     {
         "id": 3,
         "name": "Jjr",
@@ -46,5 +39,16 @@
         "birthdate": "0900-03-05",
         "password": "123456",
         "tipo": "comum"
+    },
+    {
+        "id": 1,
+        "name": "admin",
+        "email": "admin@admin",
+        "birthdate": "2010-02-08",
+        "password": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918", 
+        "tipo": "admin"
+    },
+    {
+        "_comment":"senha admin: admin"
     }
 ]
