@@ -1,10 +1,10 @@
 [
     {
         "id": 2,
-        "name": "Admin Test",
-        "email": "admin@test.com.br",
+        "name": "Admin ",
+        "email": "admin@admin",
         "birthdate": "2006-04-08",
-        "password": "123",
+        "password": "admin",
         "tipo": "admin"
     },
     {
@@ -20,7 +20,7 @@
         "name": "Joao",
         "email": "joao@email.com",
         "birthdate": "2025-11-14",
-        "password": "123456",
+        "password": "joao123",
         "tipo": "comum"
     },
     {
@@ -29,6 +29,22 @@
         "email": "carlos@gmail.com",
         "birthdate": "2006-09-05",
         "password": "12345",
+        "tipo": "comum"
+    },
+    {
+        "id": 6,
+        "name": "Thiago",
+        "email": "thiago@email.com",
+        "birthdate": "2003-03-03",
+        "password": "123456",
+        "tipo": "comum"
+    },
+    {
+        "id": 7,
+        "name": "Joao",
+        "email": "joao@email.com",
+        "birthdate": "0900-03-05",
+        "password": "123456",
         "tipo": "comum"
     }
 ]
