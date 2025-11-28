@@ -118,5 +118,45 @@
         "usuario_nome": "Bruno",
         "nota": 5,
         "comentario": "esse filme é bom"
+    },
+    {
+        "id": 20,
+        "filme_id": 17,
+        "usuario_id": 5,
+        "usuario_nome": "Joao",
+        "nota": 1,
+        "comentario": "não gostei "
+    },
+    {
+        "id": 21,
+        "filme_id": 7,
+        "usuario_id": 7,
+        "usuario_nome": "Joana",
+        "nota": 5,
+        "comentario": "meu pai gostava dess filme \r\n"
+    },
+    {
+        "id": 22,
+        "filme_id": 17,
+        "usuario_id": 7,
+        "usuario_nome": "Joana",
+        "nota": 5,
+        "comentario": "mmm"
+    },
+    {
+        "id": 23,
+        "filme_id": 21,
+        "usuario_id": 7,
+        "usuario_nome": "Joana",
+        "nota": 4,
+        "comentario": "excelente!"
+    },
+    {
+        "id": 24,
+        "filme_id": 16,
+        "usuario_id": 7,
+        "usuario_nome": "Joana",
+        "nota": 2.9,
+        "comentario": "L"
     }
 ]

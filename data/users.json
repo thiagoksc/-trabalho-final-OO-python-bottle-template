@@ -46,5 +46,13 @@
         "birthdate": "2006-05-04",
         "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
         "tipo": "comum"
+    },
+    {
+        "id": 7,
+        "name": "Joana",
+        "email": "joana@email.com",
+        "birthdate": "2004-05-02",
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "tipo": "comum"
     }
 ]

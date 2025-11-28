@@ -69,3 +69,27 @@ class AvaliacaoService:
         lista_dicts = [av.to_dict() for av in todas]
         with open(self.caminho_arquivo, 'w', encoding='utf-8') as f:
             json.dump(lista_dicts, f, indent=4, ensure_ascii=False)
+
+    def calcular_media_por_filme(self):
+        todas_avaliacoes = self._listar_todas()
+        contagem = {}
+        for av in todas_avaliacoes:
+            filme_id = av.filme_id
+            try:
+                nota = float(av.nota)
+            except(ValueError, TypeError):
+                continue
+            if filme_id not in contagem:
+                contagem[filme_id] = {'soma': 0.0, 'count': 0}
+            
+            contagem[filme_id]['soma'] += nota
+            contagem[filme_id]['count'] += 1
+        
+        medias = {}
+        for filme_id, data in contagem.items():
+            if data['count'] > 0:
+                medias[filme_id] = data['soma'] / data['count']
+            else:
+                medias[filme_id] = 0.0
+
+        return medias

@@ -76,7 +76,7 @@
         <h4>Deixe sua opinião:</h4>
         <form action="/avaliar/{{filme.id}}" method="POST">
             <label>Nota (1 a 5):</label>
-            <input type="number" name="nota" min="1" max="5" required style="width: 50px;">
+            <input type="number" name="nota" min="1" max="5" step="0.1" required style="width: 50px;">
             <br><br>
             <textarea name="comentario" rows="3" style="width: 100%;" placeholder="O que você achou do filme?" required></textarea>
             <br><br>
