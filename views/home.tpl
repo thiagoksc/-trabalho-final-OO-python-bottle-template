@@ -67,8 +67,15 @@
                     
                     <p><strong>Gênero:</strong> {{filme.genero}}</p>
                     <p>{{filme.sinopse}}</p>
-                    <a href="/editar/{{filme.id}}" style="color: #d39e00; font-weight: bold; text-decoration: none; margin-right: 15px;">
-                        [Editar]
+                    % if user.eh_admin():
+
+                        <div style="margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 5px;">
+                            <small>Painel Admin:</small><br>
+                            <a href="/editar/{{filme.id}}" style="color: orange;">[Editar]</a>
+                            <a href="/adicionar" class="btn-add">+ Adicionar Filme</a>
+                            <a href="/deletar/{{filme.id}}" style="color: red;" onclick="return confirm('Excluir?')">[Excluir]</a>
+                        </div>
+                    % end
                     </a>
                     
                     <a href="/deletar/{{filme.id}}" class="btn-delete" onclick="return confirm('Tem certeza que deseja excluir este filme?')">

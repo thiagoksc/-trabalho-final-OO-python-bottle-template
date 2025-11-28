@@ -18,16 +18,22 @@ avaliacao_service = AvaliacaoService()
 user_service = UserService()
 filme_service = FilmeService()
 
+def get_usuario_logado():
+    usuario_id = request.get_cookie("usuario_logado", secret='chave_secreta_grupo')
+    if usuario_id:
+        return user_service.get_by_id(int(usuario_id))
+    return None
+
 @route('/')
 @view('home')
 def home():
-    
-    if not request.get_cookie("usuario_logado", secret='chave_secreta_grupo'):
+    usuario = get_usuario_logado()
+    if not usuario:
         redirect('/login')
-    # -------------------------------------------------------
 
     filmes = filme_service.listar_todos()
-    return dict(filmes=filmes)
+    
+    return dict(filmes=filmes, user=usuario)
 
 # Rota para MOSTRAR o formulário
 @route('/adicionar', method='GET')

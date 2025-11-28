@@ -1,23 +1,26 @@
 [
     {
         "id": 2,
-        "name": "test",
-        "email": "test@test.com.br",
+        "name": "Admin Test",
+        "email": "admin@test.com.br",
         "birthdate": "2006-04-08",
-        "password": "123"
+        "password": "123",
+        "tipo": "admin"
     },
     {
         "id": 3,
         "name": "Jjr",
         "email": "Jjr@email.com",
         "birthdate": "2024-08-05",
-        "password": "123"
+        "password": "123",
+        "tipo": "comum"
     },
     {
         "id": 4,
         "name": "Joao",
         "email": "joao@email.com",
         "birthdate": "2025-11-14",
-        "password": "123456"
+        "password": "123456",
+        "tipo": "comum"
     }
 ]

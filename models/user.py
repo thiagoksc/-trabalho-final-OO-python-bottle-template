@@ -5,12 +5,16 @@ DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 
 class User:
     
-    def __init__(self, id, name, email, birthdate, password=None):
+    def __init__(self, id, name, email, birthdate, password=None, tipo='comum'):
         self.id = id
         self.name = name
         self.email = email
         self.birthdate = birthdate
         self.password = password
+        self.tipo = tipo
+
+    def eh_admin(self):
+        return False
 
     def __repr__(self):
         return (f"User(id={self.id}, name='{self.name}', email='{self.email}', "
@@ -22,7 +26,8 @@ class User:
             'name': self.name,
             'email': self.email,
             'birthdate': self.birthdate,
-            'password': self.password  
+            'password': self.password, 
+            'tipo': self.tipo
         }
 
     @classmethod
@@ -34,6 +39,13 @@ class User:
             birthdate=data['birthdate'],
             password=data.get('password') 
         )
+
+class Admin(User):
+    def __init__(self, id, name, email, birthdate, password=None):
+        super().__init__(id, name, email, birthdate, password, tipo='admin')
+    
+    def eh_admin(self):
+        return True
 
 
 class UserModel:
@@ -47,7 +59,21 @@ class UserModel:
             return []
         with open(self.FILE_PATH, 'r', encoding='utf-8') as f:
             data = json.load(f)
-            return [User(**item) for item in data] 
+            lista_usuarios = []
+            for item in data:
+                if item.get('tipo') == 'admin':
+                    user = Admin(
+                        id=item['id'], name=item['name'], email=item['email'], 
+                        birthdate=item['birthdate'], password=item.get('password')
+                    )
+                else:
+                    user = User(
+                        id=item['id'], name=item['name'], email=item['email'], 
+                        birthdate=item['birthdate'], password=item.get('password'), 
+                        tipo='comum'
+                    )
+                lista_usuarios.append(user)
+            return lista_usuarios
 
     def _save(self):
         with open(self.FILE_PATH, 'w', encoding='utf-8') as f:
