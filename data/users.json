@@ -3,12 +3,21 @@
         "id": 2,
         "name": "test",
         "email": "test@test.com.br",
-        "birthdate": "2006-04-08"
+        "birthdate": "2006-04-08",
+        "password": "123"
     },
     {
         "id": 3,
         "name": "Jjr",
         "email": "Jjr@email.com",
-        "birthdate": "2024-08-05"
+        "birthdate": "2024-08-05",
+        "password": "123"
+    },
+    {
+        "id": 4,
+        "name": "Joao",
+        "email": "joao@email.com",
+        "birthdate": "2025-11-14",
+        "password": "123456"
     }
 ]
