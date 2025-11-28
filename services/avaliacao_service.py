@@ -52,3 +52,20 @@ class AvaliacaoService:
         lista_dicts = [av.to_dict() for av in todas]
         with open(self.caminho_arquivo, 'w', encoding='utf-8') as f:
             json.dump(lista_dicts, f, indent=4, ensure_ascii=False)
+
+
+    def buscar_por_id(self, id_avaliacao):
+        todas = self._listar_todas()
+        for av in todas:
+            if av.id == id_avaliacao:
+                return av
+        return None
+    
+    def remover_por_filme(self, filme_id):
+        todas = self._listar_todas()
+        
+        todas = [av for av in todas if av.filme_id != filme_id]
+        
+        lista_dicts = [av.to_dict() for av in todas]
+        with open(self.caminho_arquivo, 'w', encoding='utf-8') as f:
+            json.dump(lista_dicts, f, indent=4, ensure_ascii=False)

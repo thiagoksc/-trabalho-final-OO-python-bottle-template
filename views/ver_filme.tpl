@@ -42,11 +42,13 @@
                 <p>
                     {{av.comentario}}
                     
-                    <a href="/deletar_avaliacao/{{av.id}}/{{filme.id}}" 
-                       style="color: red; font-size: 0.8em; margin-left: 10px; text-decoration: none;"
-                       onclick="return confirm('Apagar este comentário?')">
-                       [Excluir]
-                    </a>
+                    % if user and (user.id == av.usuario_id or user.eh_admin()):
+                        <a href="/deletar_avaliacao/{{av.id}}/{{filme.id}}" 
+                        style="color: red; font-size: 0.8em; margin-left: 10px; text-decoration: none;"
+                        onclick="return confirm('Apagar este comentário?')">
+                        [Excluir]
+                        </a>
+                    % end
                 </p>
             </div>
         % end
