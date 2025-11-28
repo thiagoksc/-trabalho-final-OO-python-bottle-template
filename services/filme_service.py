@@ -21,12 +21,14 @@ class FilmeService:
                 genero=item['genero'],
                 ano=item['ano'],
                 imagem=item['imagem'],
-                sinopse=item['sinopse']
+                sinopse=item['sinopse'],
+                usuario_id=item.get('usuario_id'),
+                usuario_nome=item.get('usuario_nome', 'Anônimo')
             )
             lista_filmes.append(filme)
         return lista_filmes
 
-    def adicionar(self, titulo, genero, ano, imagem, sinopse):
+    def adicionar(self, titulo, genero, ano, imagem, sinopse, usuario_id, usuario_nome):
         filmes = self.listar_todos()
         
         # Gera um ID novo automaticamente
@@ -34,8 +36,8 @@ class FilmeService:
         if filmes:
             novo_id = filmes[-1].id + 1
             
-        # Cria o Objeto Filme
-        novo_filme = Filme(novo_id, titulo, genero, ano, imagem, sinopse)
+        # Cria o Objeto Filme jaa com dono
+        novo_filme = Filme(novo_id, titulo, genero, ano, imagem, sinopse, usuario_id, usuario_nome)
         filmes.append(novo_filme)
         
         # Converte para dicionário para salvar no JSON

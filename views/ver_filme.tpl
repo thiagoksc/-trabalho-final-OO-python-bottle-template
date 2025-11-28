@@ -24,8 +24,14 @@
             <p>{{filme.sinopse}}</p>
             
             <br>
-            <a href="/editar/{{filme.id}}" style="color: orange;">[Editar Filme]</a>
-        </div>
+            % if user and (user.id == filme.usuario_id or user.eh_admin()):
+                <div style="margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 5px;">
+                    <a href="/editar/{{filme.id}}" style="color: orange; font-weight: bold;">[Editar Filme]</a>
+                    
+                    <a href="/deletar/{{filme.id}}" style="color: red; margin-left: 10px;" onclick="return confirm('Excluir?')">[Excluir Filme]</a>
+                </div>
+            
+            % end
     </div>
 
     <div class="comentarios">

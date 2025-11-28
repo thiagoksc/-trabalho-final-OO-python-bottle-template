@@ -44,47 +44,76 @@ def form_adicionar():
 # Rota para PROCESSAR o formulário
 @route('/adicionar', method='POST')
 def acao_adicionar():
+    
+    #pega o usuario logado
+    usuario = get_usuario_logado()
+    if not usuario:
+        redirect('/login')
+
     titulo = limpar_texto(request.forms.get('titulo'))
     genero = limpar_texto(request.forms.get('genero'))
     ano = request.forms.get('ano')
     imagem = request.forms.get('imagem')
     sinopse = limpar_texto(request.forms.get('sinopse'))
     
-    filme_service.adicionar(titulo, genero, ano, imagem, sinopse)
+    #passa o id e nome do usuario para o serviço
+    filme_service.adicionar(titulo, genero, ano, imagem, sinopse, usuario.id, usuario.name)
     
     redirect('/')
 
-#Rota para deletar filme
+#Rota para deletar filme(com proteção)
 @route('/deletar/<id:int>') 
 def acao_deletar(id):
-    avaliacao_service.remover_por_filme(id)
-    filme_service.remover(id)
+    usuario = get_usuario_logado()
+    if not usuario: redirect('/login')
+
+    filme = filme_service.buscar_por_id(id)
+
+    #so apaga se for dono ou admin
+    if filme and (filme.usuario_id == usuario.id or usuario.eh_admin()):
+        avaliacao_service.remover_por_filme(id)
+        filme_service.remover(id)
     redirect('/')
+
 
 
 @route('/editar/<id:int>', method='GET')
 @view('editar_filme')
 def form_editar(id):
-    # Busca o filme para preencher os campos
-    filme = filme_service.buscar_por_id(id)
-    return dict(filme=filme)
+    usuario = get_usuario_logado()
+    if not usuario: 
+        redirect('/login')
 
+    filme = filme_service.buscar_por_id(id)
+    if filme and (filme.usuario_id == usuario.id or usuario.eh_admin()):
+        return dict(filme=filme)
+    else:
+        redirect('/')
+
+#Rpta de editar post(com proteção)
 @route('/editar/<id:int>', method='POST')
 def acao_editar(id):
-    titulo = limpar_texto(request.forms.get('titulo'))
-    genero = limpar_texto(request.forms.get('genero'))
-    ano = request.forms.get('ano')
-    imagem = request.forms.get('imagem')
-    sinopse = limpar_texto(request.forms.get('sinopse'))
+    usuario = get_usuario_logado()
+    if not usuario: redirect('/login')
+
+    filme = filme_service.buscar_por_id(id)
     
-    filme_service.atualizar(id, titulo, genero, ano, imagem, sinopse)
+    #so edita se for dono  do post ou admin
+    if filme and (filme.usuario_id == usuario.id or usuario.eh_admin()):
+        titulo = limpar_texto(request.forms.get('titulo'))
+        genero = limpar_texto(request.forms.get('genero'))
+        ano = request.forms.get('ano')
+        imagem = request.forms.get('imagem')
+        sinopse = limpar_texto(request.forms.get('sinopse'))
+    
+        filme_service.atualizar(id, titulo, genero, ano, imagem, sinopse)
     
     redirect('/')
 
 @route('/ver/<id:int>', method='GET')
 @view('ver_filme')
 def ver_filme(id):
-    
+
     filme = filme_service.buscar_por_id(id)
     avaliacoes = avaliacao_service.buscar_por_filme(id)
  

@@ -60,7 +60,7 @@
     </style>
 </head>
 <body>
-
+    
     <div class="container">
         <div class="header-top">
             <h1>Catálogo de Filmes</h1>
@@ -70,9 +70,9 @@
             </div>
         </div>
         
-        % if user.eh_admin():
+        <div style="text-align: center; margin-bottom: 20px;">
             <a href="/adicionar" class="btn-add">+ Adicionar Filme</a>
-        % end
+        </div>
         
         <hr>
 
@@ -90,11 +90,16 @@
                     
                     <a href="/ver/{{filme.id}}">Ver detalhes e comentários...</a>
                     <p><strong>Gênero:</strong> {{filme.genero}}</p>
+
+                    <p style="font-size: 0.8em; color: #666; margin-top: 5px;">
+                        Enviado por: <strong>{{filme.usuario_nome}}</strong>
+                    </p>
+
                     <p>{{filme.sinopse}}</p>
                     
-                    % if user.eh_admin():
+                    % if user and (user.id == filme.usuario_id or user.eh_admin()):
                         <div class="admin-panel">
-                            <strong>Painel Admin:</strong>
+                            <strong>Gerenciar:</strong>
                             <a href="/editar/{{filme.id}}" style="color: #d39e00; font-weight: bold; margin-left: 10px;">[Editar]</a>
                             <a href="/deletar/{{filme.id}}" style="color: red; font-weight: bold; margin-left: 10px;" onclick="return confirm('Tem certeza que deseja excluir este filme?')">[Excluir]</a>
                         </div>
