@@ -6,9 +6,16 @@
     <style>
         body { font-family: sans-serif; background-color: #f4f4f4; padding: 20px; }
         .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { text-align: center; color: #333; }
         
-        /* Estilo do botão Adicionar */
+        /* Cabeçalho com Flexbox para alinhar itens */
+        .header-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 20px; }
+        .user-info { font-size: 0.9em; color: #555; }
+        .btn-logout { color: red; text-decoration: none; font-weight: bold; margin-left: 10px; border: 1px solid red; padding: 5px 10px; border-radius: 4px; }
+        .btn-logout:hover { background-color: red; color: white; }
+
+        h1 { margin: 0; color: #333; }
+        
+        /* Botão Adicionar */
         .btn-add { 
             display: inline-block; 
             background-color: #007bff; 
@@ -21,7 +28,7 @@
         }
         .btn-add:hover { background-color: #0056b3; }
 
-        /* Estilo do Cartão do Filme */
+        /* Cartão do Filme */
         .filme-card { 
             border: 1px solid #ddd; 
             padding: 15px; 
@@ -39,16 +46,33 @@
         }
         .filme-info { flex: 1; }
         .filme-info h2 { margin-top: 0; font-size: 1.4em; }
-        .btn-delete { color: #dc3545; text-decoration: none; font-size: 0.9em; font-weight: bold; margin-top: 10px; display: inline-block;}
-        .btn-delete:hover { text-decoration: underline; }
+        
+        /* Painel Admin */
+        .admin-panel {
+            margin-top: 10px; 
+            border-top: 1px dashed #ccc; 
+            padding-top: 10px;
+            font-size: 0.9em;
+            background-color: #fff8e1;
+            padding: 10px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Catálogo de Filmes</h1>
+        <div class="header-top">
+            <h1>Catálogo de Filmes</h1>
+            <div class="user-info">
+                Olá, <strong>{{user.name}}</strong>!
+                <a href="/logout" class="btn-logout">Sair</a>
+            </div>
+        </div>
         
-        <a href="/adicionar" class="btn-add">+ Adicionar Filme</a>
+        % if user.eh_admin():
+            <a href="/adicionar" class="btn-add">+ Adicionar Filme</a>
+        % end
         
         <hr>
 
@@ -60,27 +84,21 @@
                     <h2>
                         <a href="/ver/{{filme.id}}" style="text-decoration: none; color: #333;">
                             {{filme.titulo}}
-                        </a>
+                        </a> 
                         <small>({{filme.ano}})</small>
                     </h2>
-                    <a href="/ver/{{filme.id}}">Ver detalhes e comentários...</a>
                     
+                    <a href="/ver/{{filme.id}}">Ver detalhes e comentários...</a>
                     <p><strong>Gênero:</strong> {{filme.genero}}</p>
                     <p>{{filme.sinopse}}</p>
+                    
                     % if user.eh_admin():
-
-                        <div style="margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 5px;">
-                            <small>Painel Admin:</small><br>
-                            <a href="/editar/{{filme.id}}" style="color: orange;">[Editar]</a>
-                            <a href="/adicionar" class="btn-add">+ Adicionar Filme</a>
-                            <a href="/deletar/{{filme.id}}" style="color: red;" onclick="return confirm('Excluir?')">[Excluir]</a>
+                        <div class="admin-panel">
+                            <strong>Painel Admin:</strong>
+                            <a href="/editar/{{filme.id}}" style="color: #d39e00; font-weight: bold; margin-left: 10px;">[Editar]</a>
+                            <a href="/deletar/{{filme.id}}" style="color: red; font-weight: bold; margin-left: 10px;" onclick="return confirm('Tem certeza que deseja excluir este filme?')">[Excluir]</a>
                         </div>
                     % end
-                    </a>
-                    
-                    <a href="/deletar/{{filme.id}}" class="btn-delete" onclick="return confirm('Tem certeza que deseja excluir este filme?')">
-                        [Excluir Filme]
-                    </a>
                 </div>
             </div>
         % end

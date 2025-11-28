@@ -22,5 +22,13 @@
         "birthdate": "2025-11-14",
         "password": "123456",
         "tipo": "comum"
+    },
+    {
+        "id": 5,
+        "name": "Carlos ",
+        "email": "carlos@gmail.com",
+        "birthdate": "2006-09-05",
+        "password": "12345",
+        "tipo": "comum"
     }
 ]
