@@ -102,7 +102,11 @@
                     <p><strong>Gênero:</strong> {{filme.genero}}</p>
 
                     <p style="font-size: 0.8em; color: #666; margin-top: 5px;">
-                        Enviado por: <strong>{{filme.usuario_nome}}</strong>
+                        Enviado por: 
+                        <a href="/perfil/{{filme.usuario_id}}" style="text-decoration: none; font-weight: bold; color: #007bff;">
+                            {{filme.usuario_nome}}
+                        </a>
+
                     </p>
 
                     <p>{{filme.sinopse}}</p>

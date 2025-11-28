@@ -80,3 +80,8 @@ class FilmeService:
         lista_dicts = [f.to_dict() for f in filmes]
         with open(self.caminho_arquivo, 'w', encoding='utf-8') as f:
             json.dump(lista_dicts, f, indent=4, ensure_ascii=False)
+
+    
+    def buscar_por_usuario(self, user_id):
+        todos = self.listar_todos()
+        return [f for f in todos if f.usuario_id == user_id]

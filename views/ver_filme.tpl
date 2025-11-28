@@ -14,13 +14,26 @@
     </style>
 </head>
 <body>
-    <a href="/" class="back-link">← Voltar para a Home</a>
-
+    <div style="margin-bottom: 20px;">
+        <a href="/" class="btn btn-outline-secondary btn-sm" style="text-decoration: none; padding: 5px 10px; border: 1px solid #ccc; border-radius: 5px; color: #333;">
+            ← Voltar ao Catálogo
+        </a>
+        
+        <a href="/perfil/{{filme.usuario_id}}" class="btn btn-outline-primary btn-sm" style="text-decoration: none; padding: 5px 10px; border: 1px solid #007bff; border-radius: 5px; color: #007bff; margin-left: 10px;">
+            Ver Perfil de {{filme.usuario_nome}}
+        </a>
+    </div>
     <div class="header">
         <img src="{{filme.imagem}}" alt="{{filme.titulo}}">
         <div>
             <h1>{{filme.titulo}} <small>({{filme.ano}})</small></h1>
             <p><strong>Gênero:</strong> {{filme.genero}}</p>
+            <p style="font-size: 0.8em; color: #666;">
+                Enviado por: 
+                <a href="/perfil/{{filme.usuario_id}}" style="text-decoration: none; font-weight: bold; color: #007bff;">
+                    {{filme.usuario_nome}}
+                </a>
+            </p>
             <p>{{filme.sinopse}}</p>
             
             <br>
@@ -30,7 +43,6 @@
                     
                     <a href="/deletar/{{filme.id}}" style="color: red; margin-left: 10px;" onclick="return confirm('Excluir?')">[Excluir Filme]</a>
                 </div>
-            
             % end
     </div>
 
