@@ -182,5 +182,13 @@
         "usuario_nome": "Julio",
         "nota": 1.0,
         "comentario": "muito ruim\r\n"
+    },
+    {
+        "id": 28,
+        "filme_id": 23,
+        "usuario_id": 10,
+        "usuario_nome": "Luisa",
+        "nota": 5.0,
+        "comentario": "muito emocionante!"
     }
 ]

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar - Catálogo de Filmes</title>
+    <title>Entrar - CineTrack</title>
     <style>
         * {
             margin: 0;
@@ -193,7 +193,7 @@
     <div class="login-container">
         <!-- Lado esquerdo com branding -->
         <div class="login-left">
-            <h1>Catálogo de Filmes</h1>
+            <h1>CineTrack</h1>
             <p>Descubra, explore e organize sua coleção de filmes favoritos em um só lugar.</p>
         </div>
 

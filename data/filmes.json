@@ -158,5 +158,15 @@
         "sinopse": "Para enfrentar dificuldades de conseguir um emprego formal, o jovem Louis Bloom (Jake Gyllenhaal) decide entrar no agitado submundo do jornalismo criminal independente de Los Angeles. A fórmula é correr atrás de crimes e acidentes chocantes, registrar tudo e vender a história para veículos interessados.",
         "usuario_id": 7,
         "usuario_nome": "Joana"
+    },
+    {
+        "id": 23,
+        "titulo": "Orgulho e Preconceito",
+        "genero": "Romance",
+        "ano": "2005",
+        "imagem": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/84/14/20028635.jpg",
+        "sinopse": "Elizabeth Bennet vive com sua mãe, pai e irmãs no campo, na Inglaterra. Por ser uma das filhas mais velhas, ela enfrenta uma crescente pressão de seus pais para se casar. Quando Elizabeth é apresentada ao belo e rico Darcy, faíscas voam. Embora haja uma química óbvia entre os dois, a natureza excessivamente reservada de Darcy ameaça a relação.",
+        "usuario_id": 10,
+        "usuario_nome": "Luisa"
     }
 ]

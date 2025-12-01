@@ -62,5 +62,21 @@
         "birthdate": "2009-05-06",
         "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
         "tipo": "comum"
+    },
+    {
+        "id": 9,
+        "name": "ana",
+        "email": "anavitoriabiodefreitas@gmail.com",
+        "birthdate": "2006-02-10",
+        "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "tipo": "comum"
+    },
+    {
+        "id": 10,
+        "name": "Luisa",
+        "email": "luisa@gmail.com",
+        "birthdate": "2000-04-25",
+        "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tipo": "comum"
     }
 ]

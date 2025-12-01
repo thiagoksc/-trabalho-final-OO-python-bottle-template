@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Filme - Catálogo de Filmes</title>
+    <title>Adicionar Filme - CineTrack</title>
     <style>
         * {
             margin: 0;
@@ -381,7 +381,7 @@
                 }
             });
 
-            // Inicializar preview
+            // inicializar preview
             updatePreview();
         });
     </script>

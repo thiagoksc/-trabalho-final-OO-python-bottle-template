@@ -1,0 +1,36 @@
+Merge branch 'main' of https://github.com/thiagoksc/-trabalho-final-OO-python-bottle-template
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please run
+#	git update-ref -d MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch main
+# Your branch and 'origin/main' have diverged,
+# and have 1 and 3 different commits each, respectively.
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   README.md
+#
+# Changes not staged for commit:
+#	modified:   data/avaliacoes.json
+#	modified:   data/filmes.json
+#	modified:   data/users.json
+#	modified:   static/css/style.css
+#
+# Untracked files:
+#	static/css/bootstrap.min.css
+#	static/css/filmes.css
+#	static/js/bootstrap.bundle.min.js
+#

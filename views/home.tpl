@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Filmes</title>
+    <title>CineTrack</title>
     <style>
         * {
             margin: 0;
@@ -356,7 +356,7 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1>Catálogo de Filmes</h1>
+            <h1>CineTrack</h1>
             <div class="user-info">
                 <span>Olá, <strong>{{user.name}}</strong>!</span>
                 <a href="/logout" class="btn-logout">Sair</a>

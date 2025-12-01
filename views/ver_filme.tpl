@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{filme.titulo}} - Catálogo de Filmes</title>
+    <title>{{filme.titulo}} - CineTrack</title>
     <style>
         * {
             margin: 0;
