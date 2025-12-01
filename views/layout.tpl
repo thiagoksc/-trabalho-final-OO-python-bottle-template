@@ -27,7 +27,7 @@
     <footer class="mt-auto pt-3 pb-3 bg-light border-top">
         <div class="container text-center">
             <p class="mb-0 text-muted small">
-                &copy; 2025, CineTrack. Todos os direitos reservados.
+                &copy; 2025 CineTrack. Todos os direitos reservados.
             </p>
         </div>
     </footer>
