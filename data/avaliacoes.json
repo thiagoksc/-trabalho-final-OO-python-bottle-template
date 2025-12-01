@@ -190,5 +190,13 @@
         "usuario_nome": "Luisa",
         "nota": 5.0,
         "comentario": "muito emocionante!"
+    },
+    {
+        "id": 29,
+        "filme_id": 8,
+        "usuario_id": 5,
+        "usuario_nome": "Joao",
+        "nota": 5.0,
+        "comentario": "emocionante!"
     }
 ]
