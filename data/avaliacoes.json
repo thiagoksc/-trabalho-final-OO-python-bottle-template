@@ -198,5 +198,21 @@
         "usuario_nome": "Joao",
         "nota": 5.0,
         "comentario": "emocionante!"
+    },
+    {
+        "id": 30,
+        "filme_id": 13,
+        "usuario_id": 11,
+        "usuario_nome": "Caio",
+        "nota": 2.5,
+        "comentario": "ee"
+    },
+    {
+        "id": 31,
+        "filme_id": 24,
+        "usuario_id": 11,
+        "usuario_nome": "Caio",
+        "nota": 5.0,
+        "comentario": "da hora "
     }
 ]

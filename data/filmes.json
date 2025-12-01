@@ -168,5 +168,15 @@
         "sinopse": "Elizabeth Bennet vive com sua mãe, pai e irmãs no campo, na Inglaterra. Por ser uma das filhas mais velhas, ela enfrenta uma crescente pressão de seus pais para se casar. Quando Elizabeth é apresentada ao belo e rico Darcy, faíscas voam. Embora haja uma química óbvia entre os dois, a natureza excessivamente reservada de Darcy ameaça a relação.",
         "usuario_id": 10,
         "usuario_nome": "Luisa"
+    },
+    {
+        "id": 24,
+        "titulo": "The Hills Have Eyes",
+        "genero": "Terror",
+        "ano": "2006",
+        "imagem": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT1aJe6M5HS_cF0ql5GjYSqUtiOZuJOYiv_tRdkq8kxMEM_Y7PS",
+        "sinopse": "A família Carter sai para viajar pela Califórnia, mas seu carro dá problemas no meio do deserto, onde não há para quem pedir ajuda. Os problemas aumentam quando um grupo de sádicos que vive escondido nas colinas cerca e ataca a família.",
+        "usuario_id": 11,
+        "usuario_nome": "Caio"
     }
 ]

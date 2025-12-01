@@ -78,5 +78,13 @@
         "birthdate": "2000-04-25",
         "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
         "tipo": "comum"
+    },
+    {
+        "id": 11,
+        "name": "Caio",
+        "email": "caio@email.com",
+        "birthdate": "2000-02-05",
+        "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tipo": "comum"
     }
 ]
