@@ -118,18 +118,6 @@ python main.py
 
 5. Accese sua aplicação no navegador em: [http://localhost:8080](http://localhost:8080)
 
----
-
-## ✍️ Personalização
-Para adicionar novos modelos (ex: Atividades):
-
-1. Crie a classe no diretório **models/**.
-
-2. Crie o service correspondente para manipulação do JSON.
-
-3. Crie o controller com as rotas.
-
-4. Crie as views .tpl associadas.
 
 ---
 
