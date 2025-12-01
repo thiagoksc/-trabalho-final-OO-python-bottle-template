@@ -97,6 +97,7 @@ Dependências
 O projeto utiliza apenas o Bottle como framework externo, além do hashlib nativo do Python para segurança.
 
 Instruções
+
 1.Clonar o Repositório e navegar até a pasta.
 
 2. Crie o ambiente virtual na pasta fora do seu projeto:
