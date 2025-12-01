@@ -8,33 +8,32 @@
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
+            /* ESSENCIAL PARA O FOOTER FIXAR NO FUNDO */
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Garante que o body ocupe a altura mínima da tela */
+            min-height: 100vh;
         }
-        .container {
-            flex-grow: 1; /* Permite que o container principal ocupe o espaço restante */
+        .container-principal {
+            flex-grow: 1; 
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="container container-principal">
         {{!base}}
         
-    </div> <footer class="mt-auto pt-3 pb-3 bg-light border-top">
-    <div class="container text-center">
-        <p class="mb-0 text-muted small">
-            &copy; 2025, CineTrack. Todos os direitos reservados.
-        </p>
-        <p class="mb-0 text-muted small">
-            Desenvolvido para Orientação a Objetos (OO) UnB.
-        </p>
-    </div>
-</footer>
+    </div> 
+    <footer class="mt-auto pt-3 pb-3 bg-light border-top">
+        <div class="container text-center">
+            <p class="mb-0 text-muted small">
+                &copy; 2025, CineTrack. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
 
-<script src="/static/js/bootstrap.bundle.min.js"></script>
-<script src="/static/js/main.js"></script>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/main.js"></script>
 
 </body>
 </html>
