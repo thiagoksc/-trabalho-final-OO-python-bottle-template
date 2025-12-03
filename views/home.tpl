@@ -399,6 +399,10 @@
                             <a href="/ver/{{filme.id}}">{{filme.titulo}}</a>
                         </h2>
                         <div class="movie-year">({{filme.ano}})</div>
+                        <div>
+                         <img src="{{filme.imagem}}" alt="Capa de {{filme.titulo}}" 
+                              style="width:100%; height:auto; border-radius:8px; margin-top:10px;">
+                        </div>
                     </div>
 
                     <div class="movie-body">
