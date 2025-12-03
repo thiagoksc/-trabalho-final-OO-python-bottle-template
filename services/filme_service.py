@@ -7,7 +7,6 @@ from models.filme_model import Filme
 
 class FilmeService:
     def __init__(self):
-        # Se quiser, pode montar esse caminho com config.Config.DATA_PATH
         self.caminho_arquivo = 'data/filmes.json'
         self.omdb_key = config.Config.OMDB_KEY  # chave definida no config.py
 
@@ -38,12 +37,16 @@ class FilmeService:
                 return None, None
 
             imdb_rating = dados.get("imdbRating")  # string, ex: "8.7"
+            if imdb_rating in (None, "", "N/A"):
+                imdb_rating = None
 
             rotten_rating = None
             for r in dados.get("Ratings", []):
                 if r.get("Source") == "Rotten Tomatoes":
-                    # Vem como "92%" -> guardo só o número
-                    rotten_rating = r.get("Value", "").replace("%", "")
+                    val = r.get("Value", "")
+                    if val and val != "N/A":
+                        rotten_rating = val.replace("%", "")
+                    break
 
             return imdb_rating, rotten_rating
 
@@ -52,7 +55,9 @@ class FilmeService:
             return None, None
 
     # ======================================================================
-    # Lista todos os filmes + ATUALIZA E SALVA notas SEMPRE
+    # Lista todos os filmes
+    # - Carrega notas já salvas
+    # - Só consulta OMDb se NÃO existir nota (imdb/rotten None ou vazia)
     # ======================================================================
     def listar_todos(self):
         if not os.path.exists(self.caminho_arquivo):
@@ -62,10 +67,10 @@ class FilmeService:
             dados = json.load(f)
 
         lista_filmes = []
-        alterou = False  # se atualizar/criar notas, salvamos o JSON no final
+        alterou = False  # se criarmos campos ou preencher notas, salvamos no final
 
         for item in dados:
-            # Garante que as chaves existam no dicionário, mesmo que None
+            # Garante que as chaves existam no dicionário
             if "imdb" not in item:
                 item["imdb"] = None
                 alterou = True
@@ -73,28 +78,43 @@ class FilmeService:
                 item["rotten"] = None
                 alterou = True
 
-            imdb_antigo = item.get("imdb")
-            rotten_antigo = item.get("rotten")
+            imdb_atual = item.get("imdb")
+            rotten_atual = item.get("rotten")
 
-            # Atualizar SEMPRE ao entrar no sistema
-            novo_imdb, novo_rotten = self._consultar_notas(
-                titulo=item.get("titulo_original", ""),
-                ano=item.get("ano")
-            )
-
-            if novo_imdb is not None and novo_imdb != imdb_antigo:
-                item["imdb"] = novo_imdb
+            # Normaliza valores vazios / "N/A"
+            if imdb_atual in ("", "N/A"):
+                imdb_atual = None
+                item["imdb"] = None
                 alterou = True
 
-            if novo_rotten is not None and novo_rotten != rotten_antigo:
-                item["rotten"] = novo_rotten
+            if rotten_atual in ("", "N/A"):
+                rotten_atual = None
+                item["rotten"] = None
                 alterou = True
 
-            # Monta o objeto Filme com as notas
+            # Só consulta OMDb se faltar alguma das notas
+            if imdb_atual is None or rotten_atual is None:
+                novo_imdb, novo_rotten = self._consultar_notas(
+                    titulo=item.get("titulo", ""),
+                    ano=item.get("ano")
+                )
+
+                # Só sobrescreve se ainda estiver None
+                if imdb_atual is None and novo_imdb is not None:
+                    item["imdb"] = novo_imdb
+                    imdb_atual = novo_imdb
+                    alterou = True
+
+                if rotten_atual is None and novo_rotten is not None:
+                    item["rotten"] = novo_rotten
+                    rotten_atual = novo_rotten
+                    alterou = True
+
+            # Monta o objeto Filme com as notas (sejam antigas ou novas)
             filme = Filme(
                 id=item['id'],
                 titulo=item['titulo'],
-                titulo_original=['titulo_original'] if 'titulo_original' in item else item['titulo'],
+                titulo_original=item.get('titulo_original', item['titulo']),
                 genero=item['genero'],
                 ano=item['ano'],
                 imagem=item['imagem'],
@@ -106,7 +126,7 @@ class FilmeService:
             )
             lista_filmes.append(filme)
 
-        # Se houve qualquer alteração (novas chaves ou novas notas), salva o JSON
+        # Se houve qualquer alteração (novos campos ou notas preenchidas), persiste no JSON
         if alterou:
             with open(self.caminho_arquivo, 'w', encoding='utf-8') as f:
                 json.dump(dados, f, indent=4, ensure_ascii=False)
@@ -117,14 +137,14 @@ class FilmeService:
     # CRUD "normal"
     # ======================================================================
     def adicionar(self, titulo, genero, ano, imagem, sinopse, usuario_id, usuario_nome):
-        filmes = self.listar_todos()  # já vem com notas atualizadas
+        filmes = self.listar_todos()  # já vem com notas, mas novo filme começa sem
 
         # Gera um ID novo automaticamente
         novo_id = 1
         if filmes:
             novo_id = filmes[-1].id + 1
 
-        # Cria o Objeto Filme (sem notas, serão preenchidas via listar_todos)
+        # Cria o Objeto Filme (sem notas, serão preenchidas futuramente se quiser)
         novo_filme = Filme(
             novo_id,
             titulo,
@@ -172,6 +192,7 @@ class FilmeService:
                 filme.ano = ano
                 filme.imagem = imagem
                 filme.sinopse = sinopse
+                # Notas permanecem as mesmas (já carregadas)
                 break
 
         lista_dicts = [f.to_dict() for f in filmes]
