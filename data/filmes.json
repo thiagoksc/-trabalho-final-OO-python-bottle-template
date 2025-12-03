@@ -2,181 +2,235 @@
     {
         "id": 7,
         "titulo": "O Poderoso Chefão",
+        "titulo_original": "The Godfather",
         "genero": "Crime/Ficção policial",
         "ano": "1972",
         "imagem": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKIAegMBIgACEQEDEQH/xAAcAAABBAMBAAAAAAAAAAAAAAAABAUGBwECAwj/xAA6EAACAQMCBAQDBQcDBQAAAAABAgMABBEFIQYSMUETIlFhB3GRFDKBobEWIyQzQlJyFcHRNFOS4fD/xAAZAQACAwEAAAAAAAAAAAAAAAADBAACBQH/xAArEQACAgEEAAUDBAMAAAAAAAABAgADEQQSITETIjJBYVFxwUKB0fAUIzP/2gAMAwEAAhEDEQA/AHPiX45aVaxNHw/aS3lz0Ekw5I19/U/lUQj+M3F87EKumoCdv4c/llqj/DfBh1IwXIuopbbnXxAoIKnIyhHUHcD3yuOuRNpOCrPT7W0upIi8rFlkQZZWK5Jz7FfL+fbdK3UohxNCrTZ9Uf8Ahrj3iHVIwkkdo07KWhIhZVkI6qdzynY/SpFa8Yaoblba70J1dhlZEcFCP1/DFRrRLRtNuonjRl5X5Zl65JxyvjsSAwJ7kfKpjdyGZbaeABnSQSDtzeo+hJ/Cs/8AyLCSQ0YsprXA2xxsdcSc8s8XhP3Genzp2jdJF5kII9qhlzHcQA3UmnvI64KNnI/H5H9K0t9XWa5P2a8dJ1Us9uq/eAwOvSiVa504s5gH0ityknNYph4f4kh1SWS1lUw3ce5ifZseuKfq1K7VsXcsRsrattrQoooNXlJX1hxprFzxDHayWtiNPfVJtPDLz+KCgznrjoR+dWDVPaQ6/tDBHzLzjiy6PLnfHIu+KuGh1Ekcx3W1qjKFGOPyZrJIkUbSSsFRRksdgBTPdapc2PD9tqF+qRSAwm68hxGrMA5x1GAT8sb0zcZTy6cX1Y6pIscE6IthIRySnlB8gC8xfzZAz1HUYyON7reuXelW9ta2VtHqEryRT2eoROxMZGV3Xy5KkE9skjbBx0t3BJTkA+xkztLiK7t47i3bmikHMpwRkfI7iu1R7hCfWGhlg1u3toniPkaGQuX8zBic9NxUhqwORAuu1iJ5S4POpNfqLeRwrMpYDbLKcgn5Veui6Ofs8RlctjJKncb+ntufrSLhbQdPso8xIucbHFS6JRGoCjGKxWPjtuI4mtY+xdqzeLTIGwXQEgY/ClcdpDHjlQbdKIWONzXcGnq60xwJmu7k8mBA9KYtX4dhunNxaH7Pc93jGOYehp+rBq9lS2DDTldjVnKmQbVNLWVRdmaa0vLc/wA1QMkD371KdA1OPVNPSZHDMNmPqa2vLRZyHQ8sg9+oqMxJf6FxAJBGs2n3TYZhJ50b3B6ikq92msz+mOMRqEx+odfxJtQawrBlDDoRms1riZ0pvRzjj2O6kS05W1q7tz/DqGHIObm5vU835e9WNxfrbaTw1fX9hLA1xDHmMMeYZyB0zvjNVuNATULLjDVZLuZRYX1+Ut1A5GYock++CPoKjl7FowivhEYvs6xSm1wxx4vJB09T9/rSocov3m62nS+xTn098fv+ZeSTQtPzSPGcXIc5I2AhGT9RWwnhNw2JY/8AqQ2zDp4Yyfl1qkZorOPTeJJ1uYhfYlj8GMNzcn2mIl3PTuFAHbNPGs6bodvxbfWMjC1RJBHlCS0dubJixA3zg4/Kr+LFzoACRuPv7fTHz8y1rG4gSeRmmjVTzgEuMH945/Qj606V55vptLm00QSx2QW3guRFPAvhieUpCVYqDgP2IzjINehYf5Kf4ir1tui2q03ggHPeZUvBHEcd3Aquw5wMe9TyC451G9eX9B1WWynV4z5h0q5OGuIm1CzjUPmZR3OM7Vk21mg/EewtoyJZUEoHvSpJQegNRK31GRgBIwVwdx607JdsYwwPbO9Wr1IilmmIj2rhs+1BYUyi/YSAF1ANLI5y2/6UwuoDQDUle4r5t8ikGuadFqVn4coOxyCpwR+NKlIPTrW7nyGusA6kGcUlGBE56QGWwijkZmKDl5m6n50tNJbH7h3HWlVNUf8AMQdnqMqJLOeey4y1VdTv4TYXtyiW0MvLC4XJHMoG/XpUztdW4UTTLU3V5pA8oVudo/vhV5h89xn8KgN3q01hDxVpMdrK73+oXjNmNgFTkOGB9cr096QanaWg1BI7lJIbAzuJTb24cqpt4vurjGScgHscntQg23qbD0C04Y4+mPpgR58HTb2bX7q/4hntZIb6ZIrOC5hiDxAjk++MbnbJONqlPC9vw/bXL8+uHUb+SMBo7y7SVolwAVwu3cDO/oNqrzUXH+n39sbWNFur+7kM32XxZV5I4zGitglQWYjPz96fPh+sX7W2yrAROouWlk8IjKFIuTzd9w+3bPvXVPmkuqzUTn+iWkNNsQoUWVtyg5A8JcZ+ntSqiimZi5zPEsTFdxtUi4c1aS1uoy7vy5xhTjNRyIFiAoJPoKk+hadFO6rKpVs9SwX9aX1G3b5poabPtLg0PUP3MbxAcrDc/wCxz/8AbUv/ANQm+1GMBY1PQtuaQcL6XDbxgPcROnYBs1JL6yt3hEkTxg+w/wDVYZrJGRHi6g4M3s7UTqPEc5X07in22hREAUZ96gNvxZZaenhyNjG2W9c4+XWui/FLRojiWSQ+6rmmdMVHtFb67GPHUsHw/atJAwXaq+sfitY3U/IYmiTmwGbAGPrUt0riOx1fy28qM3bBprxEPHUVNFi8kRfpFx48THupwdqcqY7SBrS9CpzBJJWY46U+UxpCdmD2IK8ANkdGYxRWaKagZiis0VySYooorsk8TW8gSQHK7f3dKfYdXQ2oSSWOKRTt5Mj55B/2qPBB1JrZ0ZUD+GQp6MR1oT1q/cbS10ElMPGl7agJCQwUYByfrT/w7xne3t34E7sEkIAGc4NVlmpb8M7iOHi6x8flMcjchDAEHPqDS92lrCEgQtOpZmwY88b6XNYyxzyE+FMCyY6e9RNmU8qqhZidlG5r0txtwvDxDw4baILHKgDwkDYEdvlVGvwbrNhdsssTQFNw+dm+R7/KhIRWu1jDhvF5WNOmXsVjfILywMqg4MZl5D+h/SrT4Ljs9R1u2v8AR3nRUbLwSgeQb75B37jcA1x4X+H7XbR3moCKV2OQ8kTMeUen9P4/Srb07T7WygjitLeOFEUKAFGcVUqLjkcStlwqG3udRGTOp7bHFLK5rjmNdK0KlwDMxjmFFFFFlYUUUVJIUUUVJJ4hIz3rrmedQjSMyjsTsKIo+d8ZxUg0nSbaZwGlLEjPTYGgvYF7jiUljI79mbGRuB3HSlOnube5jkXYowIx7GnnXrdLVFVBgEbfKmS2UvIu22aqH3rmFFQrcYnrbhbUU1LRbaZTkNGDThPbQzxlJo1dfRgDUS+GskMOgWsUb5ATBz696l9zzvCWgIEoGVB6H2NKowavnmBuXZaccRot9CsbK4a4s4FTJyyZ2z7Dt+FOq3G2ykUn0/UIb9CUJV12dGGCp9DXYryeXsa4uAMp1ONknD9zvbP4jk9sUppHZjlYillO0HKQDjBhRRRRpSFFFFSSFFFFSSeKF2Oad9JuvCxnIplzSm3k5Tk9KXsXcJo1tgx14juFmEfL6b01RyJHGMDmPcZxWt3OZXAzkCkxNSuvC4M49vmJEnHDfGd/poVYZsIMeV6s7hHWdc4u1KGfxDa6RbkeJy4DSt+uM1T3AegPxDrQtMhVEbMSTgbDb86srT788JTyW017b5ZmBjEmQvTA2GxzmkbwiNgCNJmxPmWld6Zy3X22xPLNj94n/cH/ADSy2mEy79ehB61Xp47sIbXxWvomZceVW3zUq0XWrfV7SO8tZFkB++R/x2oaWLuyBiLW02BfNzHxByzLSukKyc08XuaXVpac5BiLiFFFFMSkKKKKkkKKKKkk8S1spwN6dOLNJTQuJNR0qOXxUtZ2RX7kdRn3wd/emmhx0H6TGB3NdEwMYTJ965/1V2D4FcMiAZjnpUJllUzXy2kY3LAEsPlip3pt5wFaki7S71KcjeW4Y4J/xBAqtIw9xIETv2qXaFwjJKfFvS0eDsCPzzSd4VeWbEcryeAJaWg6bw/fw+NFotjBbuMLmIFnHvmucv2PhO+c6ZGFt592iXop9hTFbaTqsQCwS4jA2Xm6is6tYajrctnpMCEXTndjuFA6sT6Cs0ZZtuYyVAySeIu+I3E837P2E2myyx81zvMhI5SFzy59d6bOGvi9qlmUi1dEvoehf7sgHz6GlPxmgtdE4Z0LRbc5KSNJzHq2FwWPzLVTokI71pVVlR3zEia2XrieuNA4m0vXrdJbC5Uswz4b7MPwp4ryfwvxD/ptyFnLG3c4blO6+4qx/wBvtd4feLxZV1CwkGY3lG+P8hRRqGVtriAbR7hurMumioHonxR0TUFUXnPZyHbzeZfqKmllfWt/EJbO4injP9UbA0ytit0Yo9bp6hFFFFFWlJ4lu7me7uZry5cyTTyNJI56sxOSfqa0V89a2tmXdHGVNbXFr4aCWM5Q/UVXIzgw4DbdwmhrI61yVuxrqCKhEsrAxRC3hMHTOR6VK9H4uaLCXgPKv3WXqKh4wRsaM4OO9BspWz1RlLSnUtrTONrSaRIOWaaRjyxhEyzE9gKtrhfTDY2huLpAt1OAXHXw17Ln27+9Un8HLMLxZbyyAEiNsEjoSKmnxd48TR7J9D0uX+PnXEzqf5KHt/kf0/Ck66EV/LL3u7gKZXnxa4jXiDiqb7O/Na2i+BER0ODufxP6VBiTXaxdDdDxj5G2NF7bPa3DxPvjoR0I9adUbfLBHlcjqcQSN81MuFNWivbR9B1JhyOP4aQ/0N6VCxW6O0ciuhIYEEH0NctrDriSqwocx5vUmsbuS3mBV0OPnXSx1q/02YTWN3NBIO8bkUp1O4XW9LS/QAXVuAs6j+oetR7xDihINw57jTtj7GWjofxk12y5U1GKC/iHXn8j/wDkNvyqXp8a9HKgtpl6CRuAyHH515+ya25j60XzDoxfZU3YjcDg7UpjnLjkPektbIcOD6GmCMxBHKniKmt+bpsa48rIcMMGnDo1YdeccuM0EPG2qHYiNNjmlenwGa4BxkA/nXG4tJYArFSFbpmpJwxZxO6eMcKPWq22AJkS1SEtgywuDLIafe2N2i4LHBNV3x9pdzDxtrNtGskvLM8+euEbzZJ9MGrWsrvSrayT+IUtGQ3Krgn6Vx+Kt/p2ncPzXdvGBfavEkPMy4cqvXOfakNNYwYxq9QcZlERnDA0/tENTsVwAJ4hhT/cPSo8vWlsF2Y171oWqTgjuKUsACD1EroysQwwQcEVjPrS6aSO7xnCS/3f3fOkZRhJyPselWBz3KsuDxHLh28W1v1WXHgzfu3B6b1y1K0NjfS27bhW8pHcdq6+PaWEJjgRLiVh5pHXIHyFNrOWbJqgXLFhDM2ECnubjuK2rnmtsmrESmYhrK9RRRR5niO3YUv0pQ1wvMAd+4oopJ+prJ3NuMiVnt1U4XkzgdKjvO52LNj50UUaj0CK6g/7DDJB612kuJpkVZZpHVNlDMSFHtRRRDKKZyHWtqKKhkEwDvSqfe2iJ3O+9FFVPYhU6MTiiiiuzgnRelFFFUl5/9k=",
         "sinopse": "Uma família mafiosa luta para estabelecer sua supremacia nos Estados Unidos depois da Segunda Guerra Mundial. Uma tentativa de assassinato deixa o chefão Vito Corleone incapacitado e força os filhos Michael e Sonny a assumir os negócios.",
         "usuario_id": 2,
-        "usuario_nome": "Carlos"
+        "usuario_nome": "Carlos",
+        "imdb": "9.2",
+        "rotten": "97"
     },
     {
         "id": 8,
         "titulo": " Um Sonho de Liberdade",
+        "titulo_original": "The Shawshank Redemption",
         "genero": "Ficção policial ",
         "ano": "1994",
         "imagem": "data:image/jpeg;base64,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",
         "sinopse": "Em 1947, o jovem banqueiro Andy Dufresne é condenado à prisão perpétua pelo assassinato de sua esposa e do amante dela. No entanto, apenas Andy sabe que não cometeu os crimes. Encarcerado em Shawshank, a penitenciária mais rigorosa do estado do Maine, ele faz amizade com Ellis Boyd \"Red\" Redding, um homem desiludido que está preso há 20 anos.",
         "usuario_id": 2,
-        "usuario_nome": "Carlos"
+        "usuario_nome": "Carlos",
+        "imdb": "9.3",
+        "rotten": "89"
     },
     {
         "id": 9,
         "titulo": "Scarface - A Vergonha de uma Nação",
+        "titulo_original": "Scarface",
         "genero": "Crime, Ação",
         "ano": "1932",
         "imagem": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Scarface_%281932_film_poster%29.jpg/250px-Scarface_%281932_film_poster%29.jpg",
         "sinopse": "História emocionante sobre o controle brutal exercido pelo crime organizado em Chicago durante a era da proibição do álcool.",
         "usuario_id": 2,
-        "usuario_nome": "Carlos"
+        "usuario_nome": "Carlos",
+        "imdb": "7.7",
+        "rotten": "98"
     },
     {
         "id": 10,
         "titulo": "Jumanji",
+        "titulo_original": "Jumanji",
         "genero": "Aventura",
         "ano": "1995",
         "imagem": "https://upload.wikimedia.org/wikipedia/pt/thumb/5/5e/Jumanjiposter.jpg/250px-Jumanjiposter.jpg",
         "sinopse": "Alan Parrish desapareceu quando era menino e ninguém acredita na história de seu amigo de que ele foi sugado por um jogo de tabuleiro. Vinte e seis anos depois, duas crianças acham o jogo no sótão e, quando começam a jogar, Alan é libertado. Mas a disputa ainda não acabou e Alan precisa terminar antes de ser realmente solto.",
         "usuario_id": 3,
-        "usuario_nome": "Jorge "
+        "usuario_nome": "Jorge ",
+        "imdb": "7.1",
+        "rotten": "53"
     },
     {
         "id": 11,
         "titulo": "Velozes & Furiosos",
+        "titulo_original": "The Fast and the Furious",
         "genero": "Ação/Crime",
         "ano": "2001",
         "imagem": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/23/46/19873389.jpg",
         "sinopse": "Brian O'Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.",
         "usuario_id": 3,
-        "usuario_nome": "Jorge "
+        "usuario_nome": "Jorge ",
+        "imdb": "6.8",
+        "rotten": "55"
     },
     {
         "id": 12,
         "titulo": "Matrix",
+        "titulo_original": "The Matrix",
         "genero": "Ação/Ficção científica ",
         "ano": "1999",
         "imagem": "https://upload.wikimedia.org/wikipedia/pt/c/c1/The_Matrix_Poster.jpg",
         "sinopse": "O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia.",
         "usuario_id": 3,
-        "usuario_nome": "Jorge "
+        "usuario_nome": "Jorge ",
+        "imdb": "8.7",
+        "rotten": "83"
     },
     {
         "id": 13,
         "titulo": "F1",
+        "titulo_original": "F1",
         "genero": "Esporte/Ação",
         "ano": "2025",
         "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmKFi7EpHvkB9ZiXZcwvJ2aRXYCi5Fu_pvMW-0c_Q9QwdXYNNQ",
         "sinopse": "Na década de 1990, Sonny Hayes era o piloto mais promissor da Fórmula 1 até que um acidente na pista quase encerrou sua carreira. Trinta anos depois, o proprietário de uma equipe de Fórmula 1 em dificuldades convence Sonny a voltar a correr e se tornar o melhor do mundo.",
         "usuario_id": 3,
-        "usuario_nome": "Jorge "
+        "usuario_nome": "Jorge ",
+        "imdb": "7.7",
+        "rotten": "82"
     },
     {
         "id": 14,
         "titulo": "A Substância",
+        "titulo_original": "The Substance",
         "genero": "Terror/Ficção científic",
         "ano": "2024",
         "imagem": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQAo64YlusORbyhq9NQMVsEhpcYV8BLblyr8GA-0h_ZsrC3KgQ0",
         "sinopse": "Elisabeth Sparkle, renomada por um programa de aeróbica, enfrenta um golpe devastador quando seu chefe a demite. Em meio ao seu desespero, um laboratório lhe oferece uma substância que promete transformá-la em uma versão aprimorada.",
         "usuario_id": 4,
-        "usuario_nome": "Rubens"
+        "usuario_nome": "Rubens",
+        "imdb": "7.2",
+        "rotten": "89"
     },
     {
         "id": 15,
         "titulo": "Sem Dor, Sem Ganho",
+        "titulo_original": "Pain & Gain",
         "genero": "Ação, Comédia",
         "ano": "2013",
         "imagem": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQU4qJ4QAC_GTs-mITZSqkNliwXJOAGNF_fByNZqP-T960q7QTA",
         "sinopse": "Na década de 1990 em Miami, um gerente de academia e seus cúmplices musculosos sequestram um rico empresário e forçam-no a passar todos os seus bens, incluindo carros e uma mansão de luxo, para eles.",
         "usuario_id": 4,
-        "usuario_nome": "Rubens"
+        "usuario_nome": "Rubens",
+        "imdb": "6.4",
+        "rotten": "49"
     },
     {
         "id": 16,
         "titulo": "O Senhor dos Anéis: As Duas Torres",
+        "titulo_original": "The Lord of the Rings: The Two Towers",
         "genero": "Aventura, Fantasia",
         "ano": "2002",
         "imagem": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSTexINNxKbypViQCIAAOVE0_nmHLNK4bEv2J8yloE-aMXBy6cK",
         "sinopse": "Após a captura de Merry e Pippy pelos orcs, a Sociedade do Anel é dissolvida. Frodo e Sam seguem sua jornada rumo à Montanha da Perdição para destruir o anel e descobrem que estão sendo perseguidos pelo misterioso Gollum. Enquanto isso, Aragorn, o elfo e arqueiro Legolas e o anão Gimli partem para resgatar os hobbits sequestrados e chegam ao reino de Rohan, onde o rei Theoden foi vítima de uma maldição mortal de Saruman.",
         "usuario_id": 4,
-        "usuario_nome": "Rubens"
+        "usuario_nome": "Rubens",
+        "imdb": "8.8",
+        "rotten": "95"
     },
     {
         "id": 17,
         "titulo": "1917",
+        "titulo_original": "1917",
         "genero": "Guerra",
         "ano": "2019",
         "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStJ3iWjeY291TQYdYTMNrl5nukPRijoqeDqV6NJD6HDGew0YLy",
         "sinopse": "Na Primeira Guerra Mundial, dois soldados britânicos recebem ordens aparentemente impossíveis de cumprir. Em uma corrida contra o tempo, eles precisam atravessar o território inimigo e entregar uma mensagem que pode salvar 1.600 de seus companheiros.",
         "usuario_id": 6,
-        "usuario_nome": "Bruno"
+        "usuario_nome": "Bruno",
+        "imdb": "8.2",
+        "rotten": "88"
     },
     {
         "id": 18,
         "titulo": "Sovereign",
+        "titulo_original": "Sovereign",
         "genero": "Ficção policial",
         "ano": "2025",
         "imagem": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT4BCjSdm57mwjCxCdyM_kHJRcrYqtfT-aBEaDSwVL0ozeJRdQo",
         "sinopse": "Pai e filho se identificam como Cidadãos Soberanos, um grupo de extremistas antigovernamentais. Viajando pelos Estados Unidos, eles acabam envolvidos em um conflito policial que os força a repensar os limites da liberdade.\r\nData de lançamento: 8 de junho de 2025 (mundial)",
         "usuario_id": 6,
-        "usuario_nome": "Bruno"
+        "usuario_nome": "Bruno",
+        "imdb": "6.4",
+        "rotten": "95"
     },
     {
         "id": 19,
-        "titulo": " Gato de Botas",
+        "titulo": "Gato de Botas",
+        "titulo_original": "Puss in Boots",
         "genero": "Aventura",
         "ano": "2011",
         "imagem": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRq4i2r4hVBE3PcwgFEXcioNbsJ5uWbU7jxmXSI2J8x_al3Aw0L",
         "sinopse": "Antes de conhecer Shrek e sua turma, Gato de Botas vive uma grande aventura ao lado de Humpty Dumpty e Kitty Pata Mansa. Dispostos a roubar os feijões mágicos do casal fora da lei Jack e Jill, o trio quer mesmo é conseguir a famosa gansa que bota ovos de ouro. Porém, algumas coisas não estavam nos planos, e Gato vai descobrir, meio atrasado, que tem um grande problema pela frente para conseguir limpar o que ficou para trás: a sua honra.",
         "usuario_id": 5,
-        "usuario_nome": "Joao"
+        "usuario_nome": "Joao",
+        "imdb": "6.6",
+        "rotten": "85"
     },
     {
         "id": 20,
         "titulo": "O Grande Truque",
+        "titulo_original": "The Prestige",
         "genero": "Ficção científica ",
         "ano": "2006",
         "imagem": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSmhOTPcX31d2QWpRJxAgUx0vpeh7rksLP2hKYTlY3TOpryzzG8",
         "sinopse": "No século 19, em Londres, dois amigos ilusionistas e mágicos, Alfred Borden e Rupert Angier, acabam construindo uma rivalidade, uma batalha por supremacia, que se estende ao longo dos anos e que se transforma em obsessão, cujos resultados serão inevitavelmente trágicos.",
         "usuario_id": 5,
-        "usuario_nome": "Joao"
+        "usuario_nome": "Joao",
+        "imdb": "8.5",
+        "rotten": "77"
     },
     {
         "id": 21,
         "titulo": "A Invasão",
+        "titulo_original": "Occupation",
         "genero": "Ficção científica",
         "ano": "2018",
         "imagem": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSWmS_pEYXdJRIo8n87-haRrMIqvh4-4Evj2Z2luPIqPXxijNzU",
         "sinopse": "Depois que sua pequena cidade australiana é aniquilada por um ataque alienígena avassalador, um grupo de civis foge da captura e descobre que agora estão entre os últimos sobreviventes de uma invasão extraterrestre que engolfou todo o planeta. Enquanto a humanidade cai sob ocupação mundial, eles formam um exército local para lutar contra forças inimigas muito superiores. Na linha de frente da batalha pela Terra, eles são nossa última esperança.",
         "usuario_id": 5,
-        "usuario_nome": "Joao"
+        "usuario_nome": "Joao",
+        "imdb": "4.5",
+        "rotten": "50"
     },
     {
         "id": 22,
         "titulo": "O Abutre",
+        "titulo_original": "Nightcrawler",
         "genero": "Crime",
         "ano": "2014",
         "imagem": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT5U7ztozeE0gqE7gqM22yzvhU7X_CgqpIsEHI00ysEuBTwfBDk",
         "sinopse": "Para enfrentar dificuldades de conseguir um emprego formal, o jovem Louis Bloom (Jake Gyllenhaal) decide entrar no agitado submundo do jornalismo criminal independente de Los Angeles. A fórmula é correr atrás de crimes e acidentes chocantes, registrar tudo e vender a história para veículos interessados.",
         "usuario_id": 7,
-        "usuario_nome": "Joana"
+        "usuario_nome": "Joana",
+        "imdb": "7.8",
+        "rotten": "95"
     },
     {
         "id": 23,
         "titulo": "Orgulho e Preconceito",
+        "titulo_original": "Pride & Prejudice",
         "genero": "Romance",
         "ano": "2005",
         "imagem": "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/84/14/20028635.jpg",
         "sinopse": "Elizabeth Bennet vive com sua mãe, pai e irmãs no campo, na Inglaterra. Por ser uma das filhas mais velhas, ela enfrenta uma crescente pressão de seus pais para se casar. Quando Elizabeth é apresentada ao belo e rico Darcy, faíscas voam. Embora haja uma química óbvia entre os dois, a natureza excessivamente reservada de Darcy ameaça a relação.",
         "usuario_id": 10,
-        "usuario_nome": "Luisa"
+        "usuario_nome": "Luisa",
+        "imdb": "7.8",
+        "rotten": "87"
     },
     {
         "id": 24,
         "titulo": "The Hills Have Eyes",
+        "titulo_original": "The Hills Have Eyes",
         "genero": "Terror",
         "ano": "2006",
         "imagem": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT1aJe6M5HS_cF0ql5GjYSqUtiOZuJOYiv_tRdkq8kxMEM_Y7PS",
         "sinopse": "A família Carter sai para viajar pela Califórnia, mas seu carro dá problemas no meio do deserto, onde não há para quem pedir ajuda. Os problemas aumentam quando um grupo de sádicos que vive escondido nas colinas cerca e ataca a família.",
         "usuario_id": 11,
-        "usuario_nome": "Caio"
+        "usuario_nome": "Caio",
+        "imdb": "6.4",
+        "rotten": "51"
     }
 ]

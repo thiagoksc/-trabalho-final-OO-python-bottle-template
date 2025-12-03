@@ -6,3 +6,4 @@ mccabe==0.7.0
 platformdirs==4.5.0
 pylint==4.0.2
 tomlkit==0.13.3
+requests==2.31.0

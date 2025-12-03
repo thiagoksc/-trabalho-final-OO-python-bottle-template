@@ -218,6 +218,26 @@
             margin-bottom: 15px;
         }
 
+        /* TAGS DE NOTAS */
+        .tag-rating {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .tag-rating.imdb {
+            background: #fff8e1;
+            color: #f9a825;
+        }
+
+        .tag-rating.rotten {
+            background: #ffebee;
+            color: #c62828;
+        }
+
         .movie-synopsis {
             color: #555;
             line-height: 1.5;
@@ -349,17 +369,18 @@
             .main-content {
                 padding: 20px;
             }
-             .teste-footer {
-        background: red !important;
-        color: white !important;
-        padding: 20px !important;
-        text-align: center !important;
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        z-index: 1000 !important;
-    }
+
+            .teste-footer {
+                background: red !important;
+                color: white !important;
+                padding: 20px !important;
+                text-align: center !important;
+                position: fixed !important;
+                bottom: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+                z-index: 1000 !important;
+            }
         }
     </style>
 </head>
@@ -400,13 +421,22 @@
                         </h2>
                         <div class="movie-year">({{filme.ano}})</div>
                         <div>
-                         <img src="{{filme.imagem}}" alt="Capa de {{filme.titulo}}" 
-                              style="width:100%; height:auto; border-radius:8px; margin-top:10px;">
+                            <img src="{{filme.imagem}}" alt="Capa de {{filme.titulo}}" 
+                                 style="width:100%; height:auto; border-radius:8px; margin-top:10px;">
                         </div>
                     </div>
 
                     <div class="movie-body">
-                        <div class="movie-genre">{{filme.genero}}</div>
+                        <div class="movie-genre">
+                            {{filme.genero}}
+                        </div>
+                         % if filme.imdb:
+                            <span class="tag-rating imdb">⭐ IMDb: {{filme.imdb}}</span>
+                        % end
+
+                        % if filme.rotten:
+                            <span class="tag-rating rotten">🍅 RT: {{filme.rotten}}%</span>
+                        % end
                         
                         <p class="movie-synopsis">{{filme.sinopse}}</p>
 
